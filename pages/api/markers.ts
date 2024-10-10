@@ -9,7 +9,6 @@ const REQUEST_LIMIT = 1;  // 1 request per second
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const ip: string = req.headers['x-forwarded-for'] as string;
-    console.log(ip)
 
     // Initialize the timestamps array for this IP if it doesn't exist
     if (!requestTimestamps[ip]) {
