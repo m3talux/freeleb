@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Lebanese Red Cross",
+    "logo": "/svg/lrc.svg",
+    "url": "https://donate.redcrossredcrescent.org/lb/supportLRC/~my-donation",
+    "type": "Crisis Response",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Beit El Baraka",
+    "logo": "/png/beb.png",
+    "url": "https://beitelbaraka.org/donate-now/",
+    "type": "Food & Supplies",
+    "color": "#FFA500"
+  },
+  {
+    "title": "Bassama",
+    "logo": "/png/bassama.png",
+    "url": "https://www.bassma.org/DonateNow",
+    "type": "Food & Supplies",
+    "color": "#FFA500"
+  },
+  {
+    "title": "Lebanese Social Responsibility",
+    "logo": "/jpeg/lsr.jpeg",
+    "url": "https://www.gofundme.com/f/support-the-displaced-a-call-for-solidarity",
+    "type": "Food & Supplies",
+    "color": "#FFA500"
+  },
+  {
+    "title": "Fundahope",
+    "logo": "/png/fah.png",
+    "url": "https://fundahope.com/en/campaigns/categories/solidarity-with-lebanon",
+    "type": "Food, Supplies, Medical & Shelters",
+    "color": "#0096FF"
+  }
+]
