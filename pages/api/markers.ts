@@ -2,7 +2,33 @@ import type {NextApiRequest, NextApiResponse} from "next";
 import JSZip from 'jszip';
 import xml2js from 'xml2js';
 
+// Simple in-memory store for rate limiting
+const requestTimestamps: Record<string, number[]> = {};
+const RATE_LIMIT = 1000; // 1 second in milliseconds
+const REQUEST_LIMIT = 1;  // 1 request per second
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    const ip: string = req.headers['x-forwarded-for'] as string;
+    console.log(ip)
+
+    // Initialize the timestamps array for this IP if it doesn't exist
+    if (!requestTimestamps[ip]) {
+        requestTimestamps[ip] = [];
+    }
+
+    const now = Date.now();
+
+    // Remove timestamps older than the rate limit window
+    requestTimestamps[ip] = requestTimestamps[ip].filter(timestamp => now - timestamp < RATE_LIMIT);
+
+    // Check if the request limit has been reached
+    if (requestTimestamps[ip].length >= REQUEST_LIMIT) {
+        return res.status(429).json({ error: 'Too many requests, please try again later.' });
+    }
+
+    // Record the current request's timestamp
+    requestTimestamps[ip].push(now);
+
     const kmlUrl = 'https://www.google.com/maps/d/u/0/kml?mid=13qY40wMpplijIQHuCr-Jd9o_3x8V8Lo';
 
     try {
