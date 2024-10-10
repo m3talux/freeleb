@@ -1,0 +1,60 @@
+[
+  {
+    "title": "The 961",
+    "logo": "/jpeg/the961.jpg",
+    "description": "Highly advised for unbiased war news and political opinions. Fastest reporters, follow the whatsapp channel for urgent announcements and events.",
+    "website": "https://www.the961.com/",
+    "instagram": "https://instagram.com/961app",
+    "whatsapp": "https://whatsapp.com/channel/0029Va3lT1hL2ATylnDfOD3c",
+    "isUnbiased": true,
+    "isCommunity": true,
+    "isOfficial": false,
+    "languages": [
+      "English",
+      "عربي"
+    ]
+  },
+  {
+    "title": "Political Pen",
+    "logo": "/jpeg/politicalpen.jpg",
+    "description": "Highly advised for unbiased war news and political opinions. Follow the whatsapp channel for urgent announcements.",
+    "website": "https://politicalpen.org/",
+    "instagram": "https://www.instagram.com/political.pen/",
+    "whatsapp": "https://www.whatsapp.com/channel/0029VaMe3bt4yltRiIfE3c24",
+    "isUnbiased": true,
+    "isCommunity": true,
+    "isOfficial": false,
+    "languages": [
+      "English",
+      "عربي"
+    ]
+  },
+  {
+    "title": "L'Orient-Le Jour",
+    "logo": "/jpeg/olj.jpg",
+    "description": "One of the only french-based news in Lebanon. Membership costs 1$, but live news are free to read",
+    "website": "https://www.lorientlejour.com/",
+    "instagram": "https://www.instagram.com/lorientlejour_olj",
+    "whatsapp": "https://chat.whatsapp.com/CGxOegwAQamG9gR9fm7NQR",
+    "isUnbiased": false,
+    "isCommunity": false,
+    "isOfficial": true,
+    "languages": [
+      "Français"
+    ]
+  },
+  {
+    "title": "MTV",
+    "logo": "/jpeg/mtv.jpg",
+    "description": "Lebanon's official news channel.",
+    "website": "https://www.mtv.com.lb/",
+    "instagram": "https://www.instagram.com/mtvlebanon",
+    "whatsapp": "",
+    "isUnbiased": false,
+    "isCommunity": false,
+    "isOfficial": true,
+    "languages": [
+      "عربي"
+    ]
+  }
+]
