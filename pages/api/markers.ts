@@ -2,6 +2,29 @@ import type {NextApiRequest, NextApiResponse} from "next";
 import JSZip from 'jszip';
 import xml2js from 'xml2js';
 
+interface Folder {
+    name: string[];
+    Placemark?: Placemark[];
+}
+
+interface Placemark {
+    name: string[];
+    Point: Point[];
+}
+
+interface Point {
+    coordinates: string[];
+}
+
+// Markers interface to represent the extracted data
+interface Marker {
+    title: string;
+    position: {
+        lat: number;
+        lng: number;
+    };
+}
+
 // Simple in-memory store for rate limiting
 const requestTimestamps: Record<string, number[]> = {};
 const RATE_LIMIT = 1000; // 1 second in milliseconds
@@ -22,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Check if the request limit has been reached
     if (requestTimestamps[ip].length >= REQUEST_LIMIT) {
-        return res.status(429).json({ error: 'Too many requests, please try again later.' });
+        return res.status(429).json({error: 'Too many requests, please try again later.'});
     }
 
     // Record the current request's timestamp
@@ -33,7 +56,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
         const response = await fetch(kmlUrl);
         if (!response.ok) {
-            return res.status(response.status).json({ error: 'Failed to fetch ZIP file' });
+            return res.status(response.status).json({error: 'Failed to fetch ZIP file'});
         }
 
         const blob = await response.arrayBuffer();
@@ -48,14 +71,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         xml2js.parseString(kmlText, (err, result) => {
             if (err) {
                 console.error("Error parsing KML:", err);
-                return res.status(500).json({ error: 'Failed to parse KML' });
+                return res.status(500).json({error: 'Failed to parse KML'});
             }
 
-            const markers: { title: string; position: { lat: number; lng: number } }[] = [];
-            const folder = result.kml.Document[0].Folder.find(f => f.name[0] === "Israeli Strikes");
+            const markers: Marker[] = [];
+            const folder = result.kml.Document[0].Folder.find((f: Folder) => f.name[0] === "Israeli Strikes");
 
             if (folder && folder.Placemark) {
-                folder.Placemark.forEach(placemark => {
+                folder.Placemark.forEach((placemark: Placemark) => {
                     const coords = placemark.Point[0].coordinates[0].split(",");
                     markers.push({
                         title: placemark.name[0],
@@ -70,7 +93,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             // Return the markers as a JSON response
             res.status(200).json(markers);
         });
-    } catch (error) {
-        res.status(500).json({error: 'Failed to fetch KML: ' + error.message});
+    } catch (error: unknown) {
+        res.status(500).json({error: 'Failed to fetch KML: ' + error});
     }
 }

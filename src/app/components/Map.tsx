@@ -3,6 +3,14 @@
 import {GoogleMap, Circle} from "@react-google-maps/api";
 import React, {useEffect, useState} from "react";
 
+interface Marker {
+    title: string;
+    position: {
+        lat: number;
+        lng: number;
+    };
+}
+
 const defaultMapContainerStyle = {
     width: '100%',
     height: '750px',
@@ -51,7 +59,7 @@ const MapComponent: React.FC = () => {
                 zoom={defaultMapZoom}
                 options={defaultMapOptions}
             >
-                {markers.map((marker, index) => (
+                {markers.map((marker: Marker, index) => (
                     <Circle
                         key={index}
                         center={marker.position}
