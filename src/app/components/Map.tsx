@@ -109,7 +109,7 @@ const MapComponent: React.FC = () => {
                                         strokeColor: 'rgba(159,159,159)',
                                         strokeOpacity: 1,
                                         strokeWeight: 2,
-                                        fillOpacity: 0.8,
+                                        fillOpacity: feature.properties.count == 0 ? 0.3 : 0.75,
                                     }}
                                     onMouseOver={() => setHoveredPolygon({
                                         name: feature.properties.NAME_2,
