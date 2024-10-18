@@ -5,31 +5,9 @@ import {parse} from 'date-fns';
 import * as turf from '@turf/turf';
 import polygons from '@/app/content/polygons.json';
 import {gzip} from 'zlib';
+import Folder, {KmlData, Marker, Placemark} from "@/app/interfaces/kml";
 
-interface Folder {
-    name: string[];
-    Placemark?: Placemark[];
-}
-
-interface Placemark {
-    name: string[];
-    Point: Point[];
-}
-
-interface Point {
-    coordinates: string[];
-}
-
-interface Marker {
-    title: string;
-    position: {
-        lat: number;
-        lng: number;
-    };
-    date: Date;
-}
-
-let cachedKmlData: any = null;  // Cache for KML data
+let cachedKmlData: KmlData = {};  // Cache for KML data
 let cachedKmlTimestamp: number = 0;  // Timestamp of when the KML data was last fetched
 
 const KML_TTL = 6 * 60 * 60 * 1000;  // TTL of 6 hours in milliseconds
@@ -141,7 +119,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const kmlData = await fetchAndCacheKml();  // Fetch and cache KML
 
         const markers: Marker[] = [];
-        const folder = kmlData.kml.Document[0].Folder.find((f: Folder) => f.name[0] === "Israeli Strikes");
+        const folder = kmlData.kml?.Document[0].Folder.find((f: Folder) => f.name[0] === "Israeli Strikes");
 
         if (folder && folder.Placemark) {
             folder.Placemark.forEach((placemark: Placemark) => {
