@@ -1,10 +1,9 @@
 import Header from "@/app/components/Header";
 import Image from "next/image";
 import DonationsSection from "@/app/sections/DonationsSection";
-import {MapProvider} from "@/app/providers/map-provider";
-import MapComponent from "@/app/components/Map";
 import NewsSection from "@/app/sections/NewsSection";
 import Footer from "@/app/components/Footer";
+import MapSection from "@/app/sections/map/MapSection";
 
 export default function Home() {
     return (
@@ -21,9 +20,7 @@ export default function Home() {
                 <NewsSection/>
             </div>
             <div className="max-w-7xl w-full mt-16">
-                <MapProvider>
-                    <MapComponent/>
-                </MapProvider>
+                <MapSection/>
             </div>
             <div className="mt-8 w-full">
                 <Footer/>

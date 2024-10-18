@@ -3,7 +3,7 @@ import JSZip from 'jszip';
 import xml2js from 'xml2js';
 import {parse} from 'date-fns';
 import * as turf from '@turf/turf';
-import polygons from '@/app/content/polygons.json';
+import features from '@/app/content/polygons.json';
 import {gzip} from 'zlib';
 import Folder, {KmlData, Marker, Placemark} from "@/app/interfaces/kml";
 
@@ -139,7 +139,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
 
         // Process the polygons from polygons.json
-        const updatedPolygons = polygons.features.map(polygon => {
+        const updatedPolygons = features.map(polygon => {
             const polygonShape = turf.multiPolygon(polygon.geometry.coordinates);
             let count = 0;
 

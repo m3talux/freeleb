@@ -3,7 +3,7 @@
 import {Libraries, useJsApiLoader} from '@react-google-maps/api';
 import {ReactNode} from 'react';
 
-const libraries = ['places', 'drawing', 'geometry'];
+const libraries = ['drawing', 'geometry'];
 
 export function MapProvider({children}: { children: ReactNode }) {
 
