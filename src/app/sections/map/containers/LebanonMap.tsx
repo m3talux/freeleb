@@ -6,42 +6,43 @@ import DistrictWindow from "@/app/sections/map/components/DistrictWindow";
 import HoveredPolygon from "@/app/sections/map/interfaces/HoveredPolygon";
 import {Feature} from "@/app/sections/map/interfaces/Feature";
 
-const defaultMapContainerStyle = {
-    width: '500px',
-    height: '750px',
-};
-
-const defaultMapCenter = {
-    lat: 33.764591,
-    lng: 35.8453584
-};
-
-const defaultMapZoom = 8.8;
-
-const defaultMapOptions = {
-    zoomControl: true,
-    tilt: 0,
-    gestureHandling: 'auto',
-    draggable: false,
-    maxZoom: defaultMapZoom,
-    minZoom: defaultMapZoom,
-    styles: [
-        {elementType: 'geometry', stylers: [{color: '#ffffff'}]},
-        {elementType: 'labels.text.fill', stylers: [{visibility: 'off'}]},
-        {elementType: 'labels.text.stroke', stylers: [{visibility: 'off'}]},
-        {featureType: 'road', elementType: 'geometry', stylers: [{visibility: 'off'}]},
-        {featureType: 'road', elementType: 'labels', stylers: [{visibility: 'off'}]},
-        {featureType: 'water', elementType: 'geometry', stylers: [{color: '#ffffff'}]},
-        {featureType: 'administrative', elementType: 'geometry', stylers: [{visibility: 'off'}]},
-        {featureType: 'landscape', elementType: 'geometry.fill', stylers: [{color: '#ffffff'}]},
-    ],
-    disableDefaultUI: true,
-};
-
 const MapComponent: React.FC = () => {
     const [features, setFeatures] = useState<Feature[]>([]);
-
     const [hoveredPolygon, setHoveredPolygon] = useState<HoveredPolygon | null>(null);
+
+    const isMobile = window.innerWidth <= 768;
+
+    const defaultMapContainerStyle = {
+        width: isMobile ? '100%' : '500px',  // Adjust width for mobile
+        height: isMobile ? '650px' : '750px',  // Adjust height for mobile
+    };
+
+    const defaultMapCenter = {
+        lat: 33.764591,
+        lng: 35.8453584
+    };
+
+    const defaultMapZoom = isMobile ? 8.5 : 8.8;
+
+    const defaultMapOptions = {
+        zoomControl: true,
+        tilt: 0,
+        gestureHandling: 'auto',
+        draggable: false,
+        maxZoom: defaultMapZoom,
+        minZoom: defaultMapZoom,
+        styles: [
+            {elementType: 'geometry', stylers: [{color: '#ffffff'}]},
+            {elementType: 'labels.text.fill', stylers: [{visibility: 'off'}]},
+            {elementType: 'labels.text.stroke', stylers: [{visibility: 'off'}]},
+            {featureType: 'road', elementType: 'geometry', stylers: [{visibility: 'off'}]},
+            {featureType: 'road', elementType: 'labels', stylers: [{visibility: 'off'}]},
+            {featureType: 'water', elementType: 'geometry', stylers: [{color: '#ffffff'}]},
+            {featureType: 'administrative', elementType: 'geometry', stylers: [{visibility: 'off'}]},
+            {featureType: 'landscape', elementType: 'geometry.fill', stylers: [{color: '#ffffff'}]},
+        ],
+        disableDefaultUI: true,
+    };
 
     useEffect(() => {
         const fetchFeatures = async () => {
