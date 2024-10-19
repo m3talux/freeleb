@@ -6,7 +6,7 @@ import DistrictWindow from "@/app/sections/map/components/DistrictWindow";
 import HoveredPolygon from "@/app/sections/map/interfaces/HoveredPolygon";
 import {Feature} from "@/app/sections/map/interfaces/Feature";
 
-const MapComponent: React.FC = () => {
+const LebanonMap: React.FC = () => {
     const [features, setFeatures] = useState<Feature[]>([]);
     const [hoveredPolygon, setHoveredPolygon] = useState<HoveredPolygon | null>(null);
 
@@ -90,4 +90,4 @@ const MapComponent: React.FC = () => {
     )
 };
 
-export default MapComponent;
+export default LebanonMap;
