@@ -5,9 +5,7 @@ interface INews {
     website: string;
     instagram: string;
     whatsapp: string;
-    isUnbiased: boolean;
-    isCommunity: boolean;
-    isOfficial: boolean;
+    tag: string;
     languages: string[];
 }
 

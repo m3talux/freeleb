@@ -8,38 +8,14 @@ interface INewsCardProps {
 
 const NewsCard: React.FC<INewsCardProps> = ({news}: INewsCardProps) => (
     <div className="flex flex-row">
-        <Image className="rounded-full object-cover h-[100px] w-[100px] md:h-[120px] md:w-[120px]" src={news.logo}
-               alt={news.title} width={120}
-               height={120}
+        <Image className="rounded-full h-[100px] w-[100px] md:h-[120px] md:w-[120px]" src={news.logo}
+               alt={news.title} width={100}
+               height={100}
                loading="eager"/>
         <div className="ml-8">
             <h3 className="text-lg font-bold">{news.title}</h3>
-            <div className="flex flex-row">
-                <div>
-                    {
-                        news.isUnbiased ?
-                            <label
-                                className="bg-gray-700 text-white text-[10px] py-1 px-3 rounded-full mr-2">Unbiased</label>
-                            : <span/>
-                    }
-                </div>
-                <div>
-                    {
-                        news.isCommunity ?
-                            <label
-                                className="bg-gray-700 text-white text-[10px] py-1 px-3 rounded-full mr-2">Community</label>
-                            : <span/>
-                    }
-                </div>
-                <div>
-                    {
-                        news.isOfficial ?
-                            <label
-                                className="bg-gray-700 text-white text-[10px] py-1 px-3 rounded-full mr-2">Official</label>
-                            : <span/>
-                    }
-                </div>
-            </div>
+            <label
+                className="bg-gray-700 text-white text-[10px] py-1 px-3 rounded-full mr-2">{news.tag}</label>
             <div className="mt-4 text-sm">
                 <p className="italic">{news.description}</p>
             </div>

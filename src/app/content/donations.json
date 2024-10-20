@@ -1,12 +1,5 @@
 [
   {
-    "title": "Lebanese Red Cross",
-    "logo": "/svg/lrc.svg",
-    "url": "https://donate.redcrossredcrescent.org/lb/supportLRC/~my-donation",
-    "type": "Crisis Response",
-    "color": "#FF0000"
-  },
-  {
     "title": "Beit El Baraka",
     "logo": "/png/beb.png",
     "url": "https://beitelbaraka.org/donate-now/",
