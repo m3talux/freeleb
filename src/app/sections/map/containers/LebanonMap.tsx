@@ -1,6 +1,6 @@
 import {GoogleMap} from "@react-google-maps/api";
 import React, {useEffect, useState} from "react";
-import baseFeatures from "@/app/content/polygons.json"
+import baseFeatures from "@/data/polygons.json"
 import DistrictPolygon from "@/app/sections/map/components/DistrictPolygon";
 import DistrictWindow from "@/app/sections/map/components/DistrictWindow";
 import HoveredPolygon from "@/app/sections/map/interfaces/HoveredPolygon";
@@ -64,8 +64,9 @@ const LebanonMap: React.FC = () => {
     }, []);
 
     return (
-        <div className="w-full flex flex-col items-center">
-            <h2 className="text-2xl font-bold">IDF Strikes on Lebanon</h2>
+        <div className="py-8 w-full flex flex-col items-center">
+            <h2 className="text-4xl font-black">IDF Operations in Lebanon</h2>
+            <p className="text-xs md:text-sm text-center mt-2">(Each operation could represent multiple airstrikes or bombings)</p>
             <div className="mt-8"/>
             <GoogleMap
                 mapContainerStyle={defaultMapContainerStyle}

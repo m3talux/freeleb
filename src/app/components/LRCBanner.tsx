@@ -4,8 +4,8 @@ export default function LRCBanner() {
     return (
         <div className="relative w-full min-h-[400px]">
             <Image src="/jpeg/lrc_banner.jpg" alt="LRC Banner" width={1280} height={400}
-                   className="object-cover w-full h-auto min-h-[400px]"/>
-            <div className="absolute top-0 left-0 bottom-0 right-0 bg-red-500 opacity-60 flex flex-row">
+                   className="object-cover w-full h-auto min-h-[400px] rounded-3xl"/>
+            <div className="absolute top-0 left-0 bottom-0 right-0 bg-red-500 opacity-60 flex flex-row rounded-3xl">
                 <div className="w-full"/>
             </div>
             <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col md:flex-row justify-center text-center md:text-left md:justify-between items-center p-8">
