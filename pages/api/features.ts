@@ -3,7 +3,7 @@ import JSZip from 'jszip';
 import xml2js from 'xml2js';
 import {parse} from 'date-fns';
 import * as turf from '@turf/turf';
-import features from '@/app/content/polygons.json';
+import features from '@/data/polygons.json';
 import {gzip} from 'zlib';
 import Folder, {KmlData, Marker, Placemark} from "@/app/interfaces/kml";
 
