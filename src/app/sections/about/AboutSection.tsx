@@ -16,15 +16,6 @@ export default function AboutSection() {
                 <div className="absolute text-[8px] md:text-xs text-white bottom-4 right-4">*The background picture is AI generated.
                 </div>
             </div>
-            <div className="mt-16">
-                <h2 className="text-3xl md:text-4xl font-black">What we do</h2>
-                <p className="mt-4 text-md md:text-lg">
-                    <strong>Freeleb</strong> provides and lets its community members provide open-source information to
-                    help individuals and organizations respond to
-                    humanitarian crises. Our mission is to empower people to make a
-                    positive impact during times of need.
-                </p>
-            </div>
         </section>
     )
 }

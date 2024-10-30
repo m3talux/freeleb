@@ -3,7 +3,7 @@ import {Inter} from 'next/font/google'
 import "./globals.css";
 
 
-const inter = Inter({weight: ['100', '400', '700','900'], subsets: ['latin']})
+const inter = Inter({weight: ['100', '400', '600', '700','900'], subsets: ['latin']})
 
 export const metadata: Metadata = {
   title: "Freeleb | My Lebanon",

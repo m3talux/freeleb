@@ -2,29 +2,41 @@
   {
     "title": "Beit El Baraka",
     "logo": "/png/beb.png",
-    "url": "https://beitelbaraka.org/donate-now/",
-    "type": "Food & Supplies",
-    "color": "#FFA500"
+    "url": "https://beitelbaraka.org/"
   },
   {
     "title": "Bassama",
     "logo": "/png/bassama.png",
-    "url": "https://www.bassma.org/DonateNow",
-    "type": "Food & Supplies",
-    "color": "#FFA500"
+    "url": "https://www.bassma.org/"
   },
   {
-    "title": "L.S.R.",
+    "title": "Lebanese Social Responsibility",
     "logo": "/jpeg/lsr.jpeg",
-    "url": "https://www.gofundme.com/f/support-the-displaced-a-call-for-solidarity",
-    "type": "Food & Supplies",
-    "color": "#FFA500"
+    "url": "https://www.lebanesesocialresponsibility.org/"
   },
   {
-    "title": "Fundahope",
-    "logo": "/png/fah.png",
-    "url": "https://fundahope.com/en/campaigns/categories/solidarity-with-lebanon",
-    "type": "All Types",
-    "color": "#0096FF"
+    "title": "Kids First",
+    "logo": "/jpeg/kf.jpg",
+    "url": "https://www.kidsfirstassociation.org/"
+  },
+  {
+    "title": "Stouh Beirut",
+    "logo": "/svg/sb.svg",
+    "url": "https://www.stouhbeirut.org/"
+  },
+  {
+    "title": "Offre Joie",
+    "logo": "/png/oj.png",
+    "url": "https://offrejoie.net/"
+  },
+  {
+    "title": "Donner Sans Compter",
+    "logo": "/svg/dsc.svg",
+    "url": "https://dsclebanon.org/"
+  },
+  {
+    "title": "BorderlessNGO",
+    "logo": "/png/bngo.png",
+    "url": "https://www.borderlessngo.org/"
   }
 ]
