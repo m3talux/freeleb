@@ -1,5 +1,5 @@
 import Header from "@/app/components/Header";
-import DonationsSection from "@/app/sections/donation/DonationsSection";
+import NGOsSection from "@/app/sections/ngos/NGOsSection";
 import NewsSection from "@/app/sections/news/NewsSection";
 import Footer from "@/app/components/Footer";
 import MapSection from "@/app/sections/map/MapSection";
@@ -14,7 +14,7 @@ export default function Home() {
                 <div className="max-w-7xl px-8 xl:px-0">
                     <AboutSection/>
                     <div className="mt-8"/>
-                    <DonationsSection/>
+                    <NGOsSection/>
                     <NewsSection/>
                     <MapSection/>
                 </div>

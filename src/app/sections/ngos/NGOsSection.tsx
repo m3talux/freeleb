@@ -1,19 +1,19 @@
 import React from "react";
-import donations from "@/data/donations.json";
-import IDonation from "@/app/interfaces/donations";
-import DonationCard from "@/app/sections/donation/components/DonationCard";
-import LRCBanner from "@/app/sections/donation/containers/LRCBanner";
+import ngos from "@/data/ngos.json";
+import NGOCard from "@/app/sections/ngos/components/NGOCard";
+import LRCBanner from "@/app/sections/ngos/containers/LRCBanner";
+import INGO from "@/app/interfaces/ngo";
 
-const DonationsSection: React.FC = () => {
+const NGOsSection: React.FC = () => {
     return (
         <section className="py-8 flex flex-col items-center md:items-start">
             <h2 className="text-4xl font-black mb-8">Organizations</h2>
             <LRCBanner/>
             <div className="mt-8 flex flex-wrap items-start justify-center md:justify-start gap-8 md:gap-12">
                 {
-                    donations.map((donation: IDonation, index: number) =>
+                    ngos.map((ngo: INGO, index: number) =>
                         (
-                            <DonationCard key={index} donation={donation}/>
+                            <NGOCard key={index} ngo={ngo}/>
                         )
                     )
                 }
@@ -22,4 +22,4 @@ const DonationsSection: React.FC = () => {
     )
 }
 
-export default DonationsSection;
+export default NGOsSection;

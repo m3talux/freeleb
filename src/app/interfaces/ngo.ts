@@ -1,7 +1,7 @@
-interface IDonation {
+interface INGO {
     title: string;
     logo: string;
     url: string;
 }
 
-export default IDonation;
+export default INGO;
