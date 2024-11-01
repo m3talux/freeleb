@@ -65,7 +65,7 @@ const LebanonMap: React.FC = () => {
 
     return (
         <div className="py-8 w-full flex flex-col items-center">
-            <h2 className="text-4xl font-black">IDF Operations in Lebanon</h2>
+            <h2 className="text-4xl font-black text-center">IDF Operations in Lebanon</h2>
             <p className="text-xs md:text-sm text-center mt-2">(Each operation could represent multiple airstrikes or bombings)</p>
             <div className="mt-8"/>
             <GoogleMap

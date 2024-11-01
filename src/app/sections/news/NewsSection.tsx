@@ -1,7 +1,7 @@
 import React from "react";
 import news from "@/data/news.json";
 import INews from "@/app/interfaces/news";
-import NewsCard from "@/app/components/NewsCard";
+import NewsCard from "@/app/sections/news/components/NewsCard";
 
 const NewsSection: React.FC = () => {
     return (

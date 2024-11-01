@@ -38,5 +38,25 @@
     "title": "BorderlessNGO",
     "logo": "/png/bngo.png",
     "url": "https://www.borderlessngo.org/"
+  },
+  {
+    "title": "Live Love Beirut",
+    "logo": "/png/ll.png",
+    "url": "https://livelove.org/donate"
+  },
+  {
+    "title": "Nusaned",
+    "logo": "/png/nusaned.png",
+    "url": "https://nusaned.org/"
+  },
+  {
+    "title": "Food Blessed",
+    "logo": "/png/foodblessed.png",
+    "url": "https://foodblessed.org/"
+  },
+  {
+    "title": "Lebanese Food Bank",
+    "logo": "/png/lfb.png",
+    "url": "https://lebanesefoodbank.org/"
   }
 ]

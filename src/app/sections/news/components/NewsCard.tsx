@@ -8,9 +8,9 @@ interface INewsCardProps {
 
 const NewsCard: React.FC<INewsCardProps> = ({news}: INewsCardProps) => (
     <div className="flex flex-row">
-        <Image className="rounded-full h-[100px] w-[100px] md:h-[120px] md:w-[120px]" src={news.logo}
-               alt={news.title} width={100}
-               height={100}
+        <Image className="rounded-full object-contain h-[80px] w-[80px] md:h-[100px] md:w-[100px]" src={news.logo}
+               alt={news.title} width={80}
+               height={80}
                loading="eager"/>
         <div className="ml-8">
             <h3 className="text-lg font-bold">{news.title}</h3>

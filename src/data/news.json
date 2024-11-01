@@ -52,10 +52,22 @@
   {
     "title": "MTV",
     "logo": "/jpeg/mtv.jpg",
-    "description": "Lebanon's official news channel.",
+    "description": "Lebanon official news channel.",
     "website": "https://www.mtv.com.lb/",
     "instagram": "https://www.instagram.com/mtvlebanon",
-    "whatsapp": "",
+    "whatsapp": "https://www.whatsapp.com/channel/0029Va3K7tD002T47JK42k45",
+    "tag": "Official",
+    "languages": [
+      "عربي"
+    ]
+  },
+  {
+    "title": "Al Jadeed",
+    "logo": "/png/aljadeed.png",
+    "description": "Lebanon official news channel.",
+    "website": "https://www.aljadeed.tv/",
+    "instagram": "https://www.instagram.com/aljadeed/",
+    "whatsapp": "https://whatsapp.com/channel/0029Va6tbhP5fM5WTsIgMy2b",
     "tag": "Official",
     "languages": [
       "عربي"
