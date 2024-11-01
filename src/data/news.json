@@ -6,11 +6,7 @@
     "website": "https://www.the961.com/",
     "instagram": "https://instagram.com/961app",
     "whatsapp": "https://whatsapp.com/channel/0029Va3lT1hL2ATylnDfOD3c",
-    "tag": "Community",
-    "languages": [
-      "English",
-      "عربي"
-    ]
+    "tag": "Community"
   },
   {
     "title": "Middle East Eye",
@@ -19,10 +15,7 @@
     "website": "https://www.middleeasteye.net/",
     "instagram": "https://www.instagram.com/middleeasteye",
     "whatsapp": "",
-    "tag": "Community",
-    "languages": [
-      "English"
-    ]
+    "tag": "Community"
   },
   {
     "title": "Political Pen",
@@ -31,11 +24,7 @@
     "website": "https://politicalpen.org/",
     "instagram": "https://www.instagram.com/political.pen/",
     "whatsapp": "https://www.whatsapp.com/channel/0029VaMe3bt4yltRiIfE3c24",
-    "tag": "Community",
-    "languages": [
-      "English",
-      "عربي"
-    ]
+    "tag": "Community"
   },
   {
     "title": "L'Orient-Le Jour",
@@ -44,10 +33,7 @@
     "website": "https://www.lorientlejour.com/",
     "instagram": "https://www.instagram.com/lorientlejour_olj",
     "whatsapp": "https://chat.whatsapp.com/CGxOegwAQamG9gR9fm7NQR",
-    "tag": "Official",
-    "languages": [
-      "Français"
-    ]
+    "tag": "Official"
   },
   {
     "title": "MTV",
@@ -56,10 +42,7 @@
     "website": "https://www.mtv.com.lb/",
     "instagram": "https://www.instagram.com/mtvlebanon",
     "whatsapp": "https://www.whatsapp.com/channel/0029Va3K7tD002T47JK42k45",
-    "tag": "Official",
-    "languages": [
-      "عربي"
-    ]
+    "tag": "Official"
   },
   {
     "title": "Al Jadeed",
@@ -68,9 +51,6 @@
     "website": "https://www.aljadeed.tv/",
     "instagram": "https://www.instagram.com/aljadeed/",
     "whatsapp": "https://whatsapp.com/channel/0029Va6tbhP5fM5WTsIgMy2b",
-    "tag": "Official",
-    "languages": [
-      "عربي"
-    ]
+    "tag": "Official"
   }
 ]

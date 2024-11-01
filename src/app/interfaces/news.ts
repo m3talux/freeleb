@@ -6,7 +6,6 @@ interface INews {
     instagram: string;
     whatsapp: string;
     tag: string;
-    languages: string[];
 }
 
 export default INews;

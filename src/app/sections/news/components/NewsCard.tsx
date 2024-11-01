@@ -19,10 +19,6 @@ const NewsCard: React.FC<INewsCardProps> = ({news}: INewsCardProps) => (
             <div className="mt-4 text-sm">
                 <p className="italic">{news.description}</p>
             </div>
-            <div className="mt-2 flex flex-row items-center">
-                <h4 className="font-bold">Language(s):</h4>
-                <label className="ml-2">{news.languages.join(', ')}</label>
-            </div>
             <div className="mt-4 flex flex-row space-x-2 items-center">
                 {
                     news.website !== '' ?
